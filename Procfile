@@ -1,1 +1,1 @@
-web: python blogchain.py
+web: gunicorn blogchain:app --log-file=-
