@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT blogchain.wsgi:application
+web: python blogchain.py
