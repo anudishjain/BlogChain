@@ -1,3 +1,14 @@
+from hashlib import sha256
+import json
+import time
+
+from flask import *
+import requests
+
+
+app = Flask(__name__)
+app.secret_key = 'abdhwifvyevekvj72434343vdbytnyjy121'
+
 # to implement the hashing using SHA256 we use the HASHLIB and to get the JSON object data from the classes we use the JSON class
 # time module is used to create the timestamps in the blocks
 
@@ -177,16 +188,6 @@ class Blockchain:
 
 ''' ----------------------------------------------------------------------------'''
 
-from hashlib import sha256
-import json
-import time
-
-from flask import *
-import requests
-
-
-app = Flask(__name__)
-app.secret_key = 'abdhwifvyevekvj72434343vdbytnyjy121'
 blockchain = Blockchain()
 
 
