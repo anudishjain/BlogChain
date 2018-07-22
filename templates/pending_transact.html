@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <title>BlogChain</title>
+  </head>
+  <body style="background-color: #1d1f23">
+    
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="{{ url_for('home') }}">BlogChain</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('chain') }}">All Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('pending_tx') }}">Mempool</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('mine') }}">Mine a Block</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('add_nodes') }}">Join BlogChain</a>
+          </li> 
+        </ul>
+      </div> 
+    </nav>
+
+    <h1 class="display3" align="center" style="color : whitesmoke; margin: 5rem">List of Unconfirmed Transactions</h1>
+
+    {% for message in collect %}
+
+      <div class="panel panel-primary" style="margin : 5rem;">
+
+        <h1 class="display1" align="left" style="color : whitesmoke; font-size: 1.5rem"><u> Posted by <i> {{ message.author }} </i></u></h1>
+        <p class="lead text-justify" align="left" style="color : whitesmoke; margin-right : 2rem">{{ message.post }}</p>
+                
+      </div>
+
+    {% endfor %}
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
