@@ -8,7 +8,7 @@ click==6.7
 coverage==4.4.1
 cryptography==2.2.2
 et-xmlfile==1.0.1
-Flask==0.12.2
+Flask==1.0
 Flask-Bcrypt==0.7.1
 Flask-Migrate==2.1.0
 Flask-Script==2.0.5
