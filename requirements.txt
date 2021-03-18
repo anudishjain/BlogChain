@@ -26,7 +26,7 @@ nose==1.3.7
 numpy==1.14.5
 openpyxl==2.5.4
 pandas==0.23.1
-Pillow==7.1.0
+Pillow==8.1.1
 psycopg2==2.7.3
 pycparser==2.18
 PyJWT==1.5.2
